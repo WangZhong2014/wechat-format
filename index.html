@@ -30,6 +30,15 @@
     gtag('js', new Date());
     gtag('config', 'UA-4178606-10');
   </script>
+
+    <script>
+        if (/mobile/i.test(navigator.userAgent)) {
+        window.location = 'index.html'
+    } else {
+      window.location = 'index-phone.html'
+    }
+
+  </script>
 </head>
 <body>
   <div id="app" class="container">
@@ -98,6 +107,7 @@
   <script src="assets/scripts/themes/default.js"></script>
   <script src="assets/scripts/renderers/wx-renderer.js"></script>
   <script src="assets/scripts/editor.js"></script>
+
 
 </body>
 </html>
