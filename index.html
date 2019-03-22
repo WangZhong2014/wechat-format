@@ -24,21 +24,14 @@
   <script src="codemirror/codemirror.js"></script>
   <script src="codemirror/mode/markdown/markdown.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4178606-10"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-4178606-10');
-  </script>
 
     <script>
-        if (/mobile/i.test(navigator.userAgent)) {
-        window.location = './index.html'
-    } else {
-      window.location = './index-phone.html'
+          if(/Android|webOS|iPhone|BlackBerry/i.test(navigator.userAgent)) {
+        window.location = "index-phone.html";
     }
-
   </script>
+
+
 </head>
 <body>
   <div id="app" class="container">
@@ -110,4 +103,5 @@
 
 
 </body>
+
 </html>
