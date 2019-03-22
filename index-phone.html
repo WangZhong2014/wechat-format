@@ -27,11 +27,14 @@
 
   <script src="codemirror/codemirror.js"></script>
   <script src="codemirror/mode/markdown/markdown.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4178606-10"></script>
 </head>
 <body>
-<h1>hello 移动端</h1>
 
+<van-tabs v-model="active" swipeable>
+  <van-tab v-for="index in 4" :title="'选项 ' + index">
+    内容 {{ index }}
+  </van-tab>
+</van-tabs>
 
 <!--   <div id="app" class="container">
     <el-container>
