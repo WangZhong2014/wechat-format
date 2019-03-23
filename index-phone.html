@@ -26,39 +26,50 @@
 </head>
 <body>
 
-  <template id="app">
-  <el-tabs value='first'>
-    <el-tab-pane label="   input   " name="first">
+<el-row id="app" type="flex" class="row-bg" justify="space-around">
+  <el-col :span="23">
+    <el-container>
+  <el-header>微信公众号format</el-header>
+
+  <el-main>
+  <el-tabs value="first" @tab-click="handleClick" stretch= 'true'>
+    <el-tab-pane label="input" name="first">用户管理</el-tab-pane>
+    <el-tab-pane label="output" name="second">配置管理</el-tab-pane>
+    <el-tab-pane label="config" name="third">角色管理</el-tab-pane>
+  </el-tabs>
+  </el-main>
+
+
+    
+
+  </el-container>
+  </el-col> 
+</el-row>
+<!--   <template id="app">   
+
+     <el-tabs value='first'>
+    <el-tab-pane label="input" name="first">
        <textarea id="editor" placeholder="Your markdown here." v-model="source">
        </textarea>
-
     </el-tab-pane>
-    <el-tab-pane label="   output   " name="second">
-      <el-col :span="24" class="preview-wrapper">
+
+    <el-tab-pane label="output" name="second">
+      <el-col :span="22">
             <section>              
               <div class="preview" contenteditable="true">
-                <div id="output" v-html="output">
-                </div>
+                <div id="output" v-html="output"></div>
               </div>
-              <div class='button'>
-              <el-button 
-              href="#" 
-              @click="copy" 
-              type="success" 
-              round 
-              > 一键复制 </el-button>
-              </div>
-
             </section>
         </el-col>
-
     </el-tab-pane>
-    <el-tab-pane label="   config   " name="third">
 
-
+    <el-tab-pane label="config" name="third">
     </el-tab-pane>
+
   </el-tabs>
-</template>
+
+</template> -->
+
 
 
 
@@ -128,6 +139,8 @@
   <script src="assets/scripts/themes/default.js"></script>
   <script src="assets/scripts/renderers/wx-renderer.js"></script>
   <script src="assets/scripts/editor.js"></script>
+
+
 
 </body>
 </html>
