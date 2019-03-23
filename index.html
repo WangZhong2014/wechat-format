@@ -29,9 +29,8 @@
 // 检测userAgent
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 　　isMobile = false;
-}
-if(!isMobile){
-　　window.location = 'index.html'
+} else {
+  window.location = 'index-pc.html'
 }
 
 
