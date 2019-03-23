@@ -13,10 +13,8 @@ var app = new Vue({
         { label: '衬线', value: 'serif', fonts: "Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"},
         { label: '无衬线', value: 'sans-serif', fonts: "Roboto, Oxygen, Ubuntu, Cantarell, PingFangSC-light, PingFangTC-light, 'Open Sans', 'Helvetica Neue', sans-serif"}
       ],
-      currentFont : {
-        label: '',
-        value: ''
-      },
+      fontIndex : '0',
+      currentFont : {},
       aboutDialogVisible: false
     }
   },
@@ -58,6 +56,11 @@ var app = new Vue({
       this.editor.setOption('theme', this.currentEditorTheme)
     },
     fontChanged: function (fonts) {
+      this.currentFont = this.builtinFonts[this.fontIndex];
+      console.log(this.fontIndex);
+
+      this.wxRenderer.fonts = this.currentFont.fonts;
+      console.log(this.wxRenderer.fonts)
       this.wxRenderer.setOptions({
         fonts: fonts
       })

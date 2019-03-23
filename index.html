@@ -69,12 +69,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     </el-tab-pane>
 
     <el-tab-pane label="设置" name="third">
-<!-- 
-<template>
-  <el-radio v-model="fontIndex" label="1">衬线字体  ABC</el-radio>
-  <el-radio v-model="fontIndex" label="2">无衬线字体 ABC</el-radio>
-</template>
- -->
+
+<el-card class="box-card">
+  <div slot="header" class="clearfix">
+    <span>选择字体</span>
+  </div>
+  <div class="text item">
+
+  <el-radio v-model="fontIndex" label="0" @change="fontChanged">衬线字体  ABC</el-radio>
+  <el-radio v-model="fontIndex" label="1" @change="fontChanged">无衬线字体 ABC</el-radio>
+
+  </div>
+</el-card>
 
     </el-tab-pane>
   </el-tabs>
