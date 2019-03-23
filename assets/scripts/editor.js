@@ -60,13 +60,15 @@ var app = new Vue({
       console.log(this.fontIndex);
 
       this.wxRenderer.fonts = this.currentFont.fonts;
-      console.log(this.wxRenderer.fonts)
+      console.log(this.wxRenderer.fonts);
       this.wxRenderer.setOptions({
-        fonts: fonts
-      })
+        fonts: this.wxRenderer.fonts
+      });
       this.refresh()
+      console.log('do');
     },
     refresh: function () {
+      console.log('before ')
       this.output = this.renderWeChat(this.editor.getValue())
     },
     deleteContent : function () {
