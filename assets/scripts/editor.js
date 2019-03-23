@@ -67,8 +67,7 @@ var app = new Vue({
       this.output = this.renderWeChat(this.editor.getValue())
     },
     deleteContent : function () {
-      this.output = this.renderWeChat(this.editor.getValue());
-      this.output = '';
+      this.editor.setValue('');
     },
     copy: function () {
       var clipboardDiv = document.getElementById('output')

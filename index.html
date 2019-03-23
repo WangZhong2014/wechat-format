@@ -47,6 +47,12 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   <el-tabs value="first" stretch="true">
     <el-tab-pane label="输入框" name="first">
       <textarea id="editor" placeholder="Your markdown here." v-model="source"></textarea>
+
+      <div class="btn">
+      <el-button type="primary" href="#" @click="deleteContent" >一键清空</el-button>
+      </div>
+
+
     </el-tab-pane>
 
     <el-tab-pane label="内容输出" name="second">
@@ -62,15 +68,15 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
     </el-tab-pane>
 
-<!--     <el-tab-pane label="设置" name="third">
-
+    <el-tab-pane label="设置" name="third">
+<!-- 
 <template>
-  <el-radio v-model="radio" label="1">备选项</el-radio>
-  <el-radio v-model="radio" label="2">备选项</el-radio>
+  <el-radio v-model="fontIndex" label="1">衬线字体  ABC</el-radio>
+  <el-radio v-model="fontIndex" label="2">无衬线字体 ABC</el-radio>
 </template>
+ -->
 
-
-    </el-tab-pane> -->
+    </el-tab-pane>
   </el-tabs>
   </el-main>
 
