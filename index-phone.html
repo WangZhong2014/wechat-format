@@ -21,20 +21,46 @@
   <script src="assets/scripts/vue-eleui.js"></script>
   <script src="assets/scripts/FuriganaMD.js"></script>
 
-  <!-- 引入移动端的样式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@1.6/lib/index.css" />
-<script src="https://cdn.jsdelivr.net/npm/vant@1.6/lib/vant.min.js"></script>
-
   <script src="codemirror/codemirror.js"></script>
   <script src="codemirror/mode/markdown/markdown.js"></script>
 </head>
 <body>
 
-<van-tabs v-model="active" swipeable>
-  <van-tab v-for="index in 4" :title="'选项 ' + index">
-    内容 {{ index }}
-  </van-tab>
-</van-tabs>
+  <template id="app">
+  <el-tabs value='first'>
+    <el-tab-pane label="   input   " name="first">
+       <textarea id="editor" placeholder="Your markdown here." v-model="source">
+       </textarea>
+
+    </el-tab-pane>
+    <el-tab-pane label="   output   " name="second">
+      <el-col :span="23" class="preview-wrapper">
+            <section>              
+              <div class="preview" contenteditable="true">
+                <div id="output" v-html="output">
+                </div>
+              </div>
+              <div class='button'>
+              <el-button 
+              href="#" 
+              @click="copy" 
+              type="success" 
+              round 
+              > 一键复制 </el-button>
+              </div>
+
+            </section>
+
+
+    </el-tab-pane>
+    <el-tab-pane label="   config   " name="third">
+      
+
+    </el-tab-pane>
+  </el-tabs>
+</template>
+
+
 
 <!--   <div id="app" class="container">
     <el-container>

@@ -23,11 +23,13 @@ var app = new Vue({
     var self = this
     this.editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
       lineNumbers: false,
+      matchBrackets: true,
       lineWrapping: true,
       styleActiveLine: true,
       theme: this.currentEditorTheme,
       mode: 'text/x-markdown',
     });
+    this.editor.setSize('auto','500px');
     this.editor.on("change", function(cm, change) {
       self.refresh()
     })
@@ -89,4 +91,5 @@ var app = new Vue({
       }
     }
   }
-})
+});
+
