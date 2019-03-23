@@ -25,12 +25,11 @@
   <script src="codemirror/mode/markdown/markdown.js"></script>
 
 <script>
-  var isMobile = true;
-// 检测userAgent
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-　　isMobile = false;
+  console.log('1');
 } else {
-  window.location = 'index-pc.html'
+    window.location.assign("https://lab.lyric.im/wxformat")
+
 }
 
 
