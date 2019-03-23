@@ -13,8 +13,9 @@ var app = new Vue({
         { label: '衬线', value: 'serif', fonts: "Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"},
         { label: '无衬线', value: 'sans-serif', fonts: "Roboto, Oxygen, Ubuntu, Cantarell, PingFangSC-light, PingFangTC-light, 'Open Sans', 'Helvetica Neue', sans-serif"}
       ],
-      currentFont: {
-        label: '', value: ''
+      currentFont : {
+        label: '',
+        value: ''
       },
       aboutDialogVisible: false
     }
@@ -29,7 +30,7 @@ var app = new Vue({
       theme: this.currentEditorTheme,
       mode: 'text/x-markdown',
     });
-    this.editor.setSize('auto','500px');
+    this.editor.setSize('auto','640px');
     this.editor.on("change", function(cm, change) {
       self.refresh()
     })
@@ -65,6 +66,10 @@ var app = new Vue({
     refresh: function () {
       this.output = this.renderWeChat(this.editor.getValue())
     },
+    deleteContent : function () {
+      this.output = this.renderWeChat(this.editor.getValue());
+      this.output = '';
+    },
     copy: function () {
       var clipboardDiv = document.getElementById('output')
       clipboardDiv.focus();
@@ -77,7 +82,7 @@ var app = new Vue({
       try {
         if (document.execCommand('copy')) {
           this.$message({
-            message: '已复制到剪贴板', type: 'success'
+            message: '已复制到剪贴板,请到微信公众平台内粘贴', type: 'success'
           })
         } else {
           this.$message({
