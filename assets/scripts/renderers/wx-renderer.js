@@ -2,7 +2,6 @@ var WxRenderer = function (opts) {
   this.opts = opts
   var ENV_USE_REFERENCES = true
   var ENV_STETCH_IMAGE = true
-
   var footnotes = []
   var footnoteindex = 0
   var styleMapping = null
@@ -140,9 +139,14 @@ var WxRenderer = function (opts) {
         }
       }
     }
-    renderer.strong = renderer.em = function (text) {
+    renderer.em = renderer.em = function (text) {
+      return '<i ' + S('em') + '>' + text + '</i>'; 
+    }
+    renderer.strong = renderer.strong = function (text) {
       return '<strong ' + S('strong') + '>' + text + '</strong>'; 
     }
+
+
     renderer.table = function (header, body) {
       return '<table ' + S('table') + '><thead ' + S('thead') + '>' + header + '</thead><tbody>' + body + '</tbody></table>'; 
     }

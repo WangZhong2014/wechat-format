@@ -1,9 +1,12 @@
 var defaultTheme = {
   BASE: {
-    'text-align': 'left',
+    'text-align': 'justify',
     'color': '#3f3f3f',
     'line-height': '1.5',
-    'font-size': '16px',
+    'font-size': '15px',
+    'letter-spacing': '0.5px',
+    'padding' :'0 0.8em',
+
   },
   BASE_BLOCK: {
     'margin': '20px 10px'
@@ -11,26 +14,38 @@ var defaultTheme = {
   // block element
   block: {
     h2: {
-      'font-size': '140%',
+      'font-size': '200%',
       'text-align': 'center',
-      'font-weight': 'normal',
-      'text-align': 'center',
-      'margin': '80px 10px 40px 10px'
+      'font-weight': 'bold',
+      'letter-spacing':'0.5px',
+      'margin': '55px 10px 30px 10px',
+      'color':'#00B7E9'
     },
     h3: {
-      'font-weight': 'bold',
-      'font-size': '120%',
+       'line-height': '150%',
+       'font-weight': 'bold',
+       'text-align': 'left',
+       'letter-spacing': '0.5px',
+       'color':'#00B7E9',
       'margin': '40px 10px 20px 10px'
     },
+
     p: {
       'margin': '10px 10px',
-      'line-height': '1.6'
+      'line-height': '1.75em',
+      'text-align': 'justify',
+      'letter-spacing': '0.5px'
     },
+
     blockquote: {
-      'color': 'rgb(91, 91, 91)',
-      'padding': '1px 0 1px 10px',
-      'background': 'rgba(158, 158, 158, 0.1)',
-      'border-left': '3px solid rgb(158,158,158)',
+  'line-height': '1.75em',
+  'margin-left': '1.1em',
+  'margin-right': '0.7em',
+  'text-align': 'left',
+  'font-weight': 'normal',
+  'border-left ': '8px solid #00A3CF',
+  'color': '#777',
+  'quotes': 'none'
     },
     code: {
       'font-size': '80%',
@@ -83,10 +98,15 @@ var defaultTheme = {
       'border-radius': '2px',
     },
     link: {
-      'color': '#ff3502'
+      'color': '#0D8ABF'
     },
     strong: {
-      'color': '#ff3502'
+      'color': '#404040'
+    },
+    em: {
+      'font-style': 'italic',
+      'color': '#00B7E9',
+      'font-weight':'bold'
     },
     table: {
       'border-collapse': 'collapse',  
@@ -102,6 +122,6 @@ var defaultTheme = {
     },
     footnote: {
       'font-size': '12px',
-    }
+    },
   }
 }

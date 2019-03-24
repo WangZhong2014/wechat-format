@@ -68,7 +68,6 @@ var app = new Vue({
       console.log('do');
     },
     refresh: function () {
-      console.log('before ')
       this.output = this.renderWeChat(this.editor.getValue())
     },
     deleteContent : function () {
