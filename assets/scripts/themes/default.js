@@ -101,12 +101,15 @@ var defaultTheme = {
       'color': '#0D8ABF'
     },
     strong: {
-      'color': '#404040'
+      'color': '#404040',
+      'padding':'0 0 0 0',
     },
     em: {
       'font-style': 'italic',
       'color': '#00B7E9',
-      'font-weight':'bold'
+      'font-weight':'bold',
+      'padding':'0 0 0 0',
+
     },
     table: {
       'border-collapse': 'collapse',  
