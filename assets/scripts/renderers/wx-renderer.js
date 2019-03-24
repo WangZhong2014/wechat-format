@@ -129,7 +129,7 @@ var WxRenderer = function (opts) {
     }
     renderer.link = function (href, title, text) {
       if (href.indexOf('https://mp.weixin.qq.com') === 0) {
-        return '<a href="' + href +'" title="' + (title || text) + '">' + text + '</a>'; 
+        return '<a style="color:#0D8ABF" href="' + href +'" title="' + (title || text) + '">' + text + '</a>'; 
       } else {
         if (ENV_USE_REFERENCES) {
           var ref = addFootnote(title || text, href)

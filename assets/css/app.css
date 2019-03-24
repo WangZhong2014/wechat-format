@@ -148,7 +148,7 @@ section {
 
 .el-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   z-index: 999;
 
 }
