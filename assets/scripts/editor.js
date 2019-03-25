@@ -24,6 +24,8 @@ var app = new Vue({
       lineNumbers: false,
       matchBrackets: true,
       lineWrapping: true,
+      autocorrect:false,
+      pasteLinesPerSelection:false,
       styleActiveLine: true,
       theme: this.currentEditorTheme,
       mode: 'text/x-markdown',
