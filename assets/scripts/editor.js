@@ -22,7 +22,7 @@ var app = new Vue({
     var self = this
     this.editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
       lineNumbers: false,
-      inputStyle: 'contenteditable',
+      inputStyle: "textarea",
       matchBrackets: true,
       lineWrapping: false,
       autocorrect:true,
