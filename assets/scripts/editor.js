@@ -21,11 +21,10 @@ var app = new Vue({
   mounted () {
     var self = this
     this.editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
-      lineNumbers: true,
+      lineNumbers: false,
       matchBrackets: true,
       lineWrapping: true,
-      autocorrect:false,
-      pasteLinesPerSelection:false,
+      autocorrect:true,
       styleActiveLine: true,
       theme: this.currentEditorTheme,
       mode: 'text/x-markdown',
