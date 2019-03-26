@@ -24,7 +24,7 @@ var app = new Vue({
       lineNumbers: false,
       inputStyle: "textarea",
       matchBrackets: true,
-      lineWrapping: false,
+      lineWrapping: true,
       autocorrect:true,
       styleActiveLine: true,
       theme: this.currentEditorTheme,
