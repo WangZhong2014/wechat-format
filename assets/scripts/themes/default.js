@@ -23,7 +23,7 @@ var defaultTheme = {
       'color':'#00B7E9'
     },
     h3: {
-       'font-size': '130%',
+       'font-size': '120%',
        'font-weight': 'bold',
        'text-align': 'left',
        'letter-spacing': '0.5px',
