@@ -1,9 +1,9 @@
 var defaultTheme = {
   BASE: {
-    'text-align': 'justify',
+    'text-align': 'left',
     'color': '#3f3f3f',
     'line-height': '1.5',
-    'font-size': '16px',
+    'font-size': '15.5px',
     'letter-spacing': '0.5px',
     'padding' :'0 0.8em',
 
@@ -28,7 +28,7 @@ var defaultTheme = {
        'text-align': 'left',
        'letter-spacing': '0.5px',
        'color':'#00B7E9',
-       'margin': '20px 0px 15px 10px',
+       'margin': '20px 8px 15px 10px',
        'padding' :'0 0 0 0.6em'
     },
 
@@ -41,7 +41,8 @@ var defaultTheme = {
 
   blockquote: {
   'line-height': '1.75em',
-  'margin-left': '1.1em',
+  'padding':'0 0 0 0.1em',
+  'margin-left': '1.4em',
   'margin-right': '0.7em',
   'text-align': 'left',
   'font-weight': 'normal',
@@ -50,12 +51,14 @@ var defaultTheme = {
   'quotes': 'none'
     },
     code: {
+      'margin-left': '1.4em',
+      'margin-right': '0.7em',    
       'font-size': '80%',
       'overflow': 'auto',
       'color': '#333',
       'background': 'rgb(247, 247, 247)',
       'border-radius': '2px',
-      'padding': '10px',
+      'padding': '1px',
       'line-height': '1.3',
       'border': '1px solid rgb(236,236,236)',
       'margin': '20px 0',
