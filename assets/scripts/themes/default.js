@@ -3,7 +3,7 @@ var defaultTheme = {
     'text-align': 'left',
     'color': '#3f3f3f',
     'line-height': '1.5',
-    'font-size': '15.5px',
+    'font-size': '16px',
     'letter-spacing': '0.5px',
     'padding' :'0 0.8em',
 
@@ -75,11 +75,11 @@ var defaultTheme = {
     },
     ol: {
       'margin-left': '0',
-      'padding-left': '20px'
+      'padding-left': '10px'
     },
     ul: {
       'margin-left': '0',
-      'padding-left': '20px',
+      'padding-left': '10px',
       'list-style': 'circle',
     },
     footnotes: {
