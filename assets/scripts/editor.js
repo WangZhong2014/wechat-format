@@ -23,7 +23,7 @@ var app = new Vue({
     this.editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
       lineNumbers: false,
       matchBrackets: true,
-      lineWrapping: true,
+      lineWrapping: false,
       autocorrect:true,
       styleActiveLine: true,
       theme: this.currentEditorTheme,
